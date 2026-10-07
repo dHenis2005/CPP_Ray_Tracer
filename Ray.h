@@ -2,6 +2,7 @@
 #define RAY_H
 
 #include "Vec3.h"
+
 class Ray {
 public:
     Point3 o;
@@ -13,8 +14,8 @@ public:
     Point3 origin() const { return o;}
     Vec3 direction() const { return dir;}
 
-    Point3 at(double t) const {
-        return o + t * dir;
+    Point3 at(double dist) const {
+        return o + dist * dir;
     }
 };
 
